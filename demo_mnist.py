@@ -152,7 +152,7 @@ svm_grid = GridSearchCV(
     svm_param_grid,
     cv=3,
     scoring='accuracy',
-    n_jobs=-1,
+    n_jobs=1,
     verbose=1
 )
 svm_grid.fit(X_train_norm, y_train)
@@ -174,7 +174,7 @@ knn_grid = GridSearchCV(
     knn_param_grid,
     cv=3,
     scoring='accuracy',
-    n_jobs=-1,
+    n_jobs=1,
     verbose=1
 )
 knn_grid.fit(X_train_norm, y_train)
