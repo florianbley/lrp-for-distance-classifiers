@@ -20,6 +20,7 @@ Output:
     Saves figure to figures/2d_comparison.png
 """
 
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import TwoSlopeNorm
@@ -240,6 +241,7 @@ plt.tight_layout()
 
 # Save figure
 output_path = 'figures/2d_comparison.png'
+os.makedirs('figures', exist_ok=True)
 plt.savefig(output_path, dpi=150, bbox_inches='tight')
 print(f"Figure saved to: {output_path}")
 
