@@ -31,7 +31,7 @@ class KDE(torch.nn.Module):
         if not isinstance(X, torch.Tensor):
             X = torch.tensor(X)
         # this implements the fixed-point iteration in Eq. (3)
-        # https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.422.8638&rep=rep1&type=pdf
+        # https://www.sciencedirect.com/science/article/pii/S0167865512001948
         self.svs = X.clone()
         N, D = self.svs.shape
         distances = torch.cdist(self.svs, self.svs)**2
